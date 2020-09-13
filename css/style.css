@@ -1,0 +1,704 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+}
+
+textarea,
+input {
+    font-family: 'Open Sans', sans-serif;
+}
+
+textarea:focus,
+input:focus{
+    outline: none;
+}
+
+.container {
+    max-width: 1110px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.title {
+    position: relative;
+    margin-top: 0;
+    margin-bottom: 30px; /*?*/
+    padding-bottom: 30px;
+    font-size: 36px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #212121;
+}
+
+.title:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    display: block;
+    width: 64px;
+    height: 2px;
+    margin-left: -32px;
+    background: #ff8b38; /*?*/
+}
+
+.subtitle {
+    margin: 0;
+    margin-bottom: 80px; /*?*/
+    font-size: 14px;
+    line-height: 1;
+    color: #86878b;
+}
+
+.btn {
+    position: relative;
+    display: inline-block;
+    padding: 15px 33px;
+    font-size: 15px;
+    font-weight: 600;
+    font-family: inherit;
+    background: none;
+    border: 2px solid;
+    color: #fff;
+    cursor: pointer;    
+}
+
+.btn .hover {
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    transform-origin: top center;
+    transform: scale3d(1,0,1);
+    transition: transform .6s cubic-bezier(.19,1,.22,1); 
+}
+
+.btn:hover .hover {
+    transform: scale3d(1,1,1);
+    transform-origin: bottom center;
+}
+
+.btn:hover span{
+    position: relative;
+    color: #000;
+}
+
+.btn-second{
+    padding: 16px 25px;
+    background: #ff8b38;
+    border: none;
+    border-radius: 3px;
+    color: #fff;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+/*--- justify inline-block start ---*/
+
+.inline-block-justify-wrap {
+    text-align: justify;
+    font-size: 0;
+}
+
+.inline-block-justify-item {
+    display: inline-block;
+    top: 1.2em;
+}
+
+.inline-block-justify-wrap:before{
+    content: '';
+    display: block;
+    width: 100%;
+    margin-bottom: -1.2em;
+}
+
+.inline-block-justify-wrap:after {
+    content: '';
+    display: inline-block;
+    width: 100%;
+}
+
+/*--- justify inline-block end ---*/
+
+
+/* ======== ======== ======== 1 header started ======== ======== ==========*/
+
+.header {
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    background: #000; 
+}
+
+.header__inner{
+    height: 70px;
+} 
+
+/* header__logo */
+
+.header__logo {
+    margin-top: 21px;
+}
+
+.header__logo-link {
+    display: block;
+}
+
+/* header__navigation  */
+
+.header__navigation {
+    margin-top: 25.5px;
+    vertical-align: top;
+}
+
+.header__list {
+    font-size: 0;
+}
+
+.header__item {
+    display: inline-block;
+    font-size: 14px;
+    margin-left: 48px;
+}
+
+.header__link {
+    font-weight: 600;
+    color: #fff;
+    text-decoration: none;
+} 
+
+/* ======== ======== ======== 1 header end ======== ======== ==========*/
+
+/* ======== ======== ======== 2 axit start ======== ======== ==========*/
+
+.axit {
+    padding-top: 179px;
+    padding-bottom: 140px;
+    font-size: 0;
+    background: url(../img/background.png) no-repeat center, 
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    background-size: cover;
+}
+
+
+.axit__text {
+    display: inline-block;
+    max-width: 512px;
+    text-align: left;
+    color: #fff;
+}
+
+.axit__logo {
+    margin-bottom: 33px;
+}
+
+.axit__title {
+    padding-bottom: 42px;
+    margin-bottom: 40px;
+    color: #fff;    
+}
+
+.axit__title:after {
+    left: 0;
+    background: #fff;
+    margin-left: 0;
+}
+
+.axit__subtitle {
+    margin: 0;
+    font-size: 16px;
+    margin-bottom: 46px;
+}
+
+.axit__form {
+    display: inline-block;
+    max-width: 360px;
+    overflow: hidden;
+    color: #fff;
+    background: #fff;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.form__label {
+    height: 54px;
+    margin-bottom: 29px;
+    padding-top: 18px;
+    padding-bottom: 15px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #333333;
+    background: #f5f5f5;;
+}
+
+.form__label span {
+    color: #ff8b38;
+}
+
+.form__input {
+    width: 285px;
+    margin-bottom: 48px;
+    padding: 10px 15px;
+    font-size: 14px;
+    color: #bdbdbd;
+    background: transparent;
+    border: 0;
+    border-bottom: 1px solid #d6d6d6;
+}
+
+.form__submit {
+    width: 100%;
+    height: 54px;
+    font-size: 15px;
+    color: #fff;
+    font-weight: 600;
+    background: #ff9b51;
+    border: none;
+}
+
+/* ======== ======== ======== 2 axit end ======== ======== ==========*/
+
+
+/* ======== ======== ======== 3 social-media start ======== ======== ==========*/
+
+.social-media {
+    margin-bottom: 2px;
+    padding: 23px 0 22px 0;
+    font-size: 0;
+    background: #fff;
+    box-shadow: 1px 1px 2px #b7b7b7;
+}
+
+/*** text ****/
+
+.social-media__text {
+    display: inline-block;
+    max-width: 360px;
+    width: 33.65%;
+    text-align: left;
+}
+
+.social-media__title {
+    margin-bottom: 12px;
+    font-size: 20px;
+    color: #333;
+}
+
+.social-media__subtitle {
+    color: #86878B;
+    font-size: 14px;
+}
+
+/*** list ****/
+
+.social-media__list {
+    display: inline-block;
+    width: 64.25%;
+    margin-top: 18px;
+    padding-left: 0;
+    font-size: 0;
+    text-align: right;
+    vertical-align: top;
+}
+
+.social-media__item {
+    display: inline-block;
+}
+
+.social-media__item:not(:first-child) {
+    margin-left: 60px;
+}
+
+.social-media__link {
+    display: block;
+}
+.social-media_pic {
+    height: 41px;
+}
+
+/* ======== ======== ======== 3 social-media end ======== ======== ==========*/
+
+/* ======== ======== ======== 4 tabs-soft start ======== ======== ==========*/
+
+.tabs-soft {    
+    background: url(../img/city.png) no-repeat 88% center;
+    padding-top: 148px;
+    padding-bottom: 114px;
+    text-align: left;
+}
+
+.tabs-soft__tabs-cntr {
+    display: inline-block;
+    width: 112px;
+    overflow: hidden;
+    border-radius: 5px;
+    margin-right: 99px;
+}
+.tabs-soft__tab {
+    display: inline-block;
+    width: 112px;
+    height: 112px;
+    background: #333333;
+    color: #fff;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 112px;
+    margin-bottom: 1px;
+}
+
+.tabs-soft__tab:hover,
+.tabs-soft__tab--active{
+    background: #ff8b38;
+}
+
+.tabs-soft__text {
+    display: inline-block;
+    width: 476px;
+    vertical-align: top;
+}
+.tabs-soft__title {
+    margin-bottom: 52px;
+}
+.tabs-soft__subtitle {
+    margin-bottom: 52px;
+    color: #86878b;
+}
+.tabs-soft__btn {
+ 
+}
+
+/* ======== ======== ========  4 tabs-soft end ======== ======== ==========*/
+
+/* ======== ======== ========  5 card start ======== ======== ==========*/
+
+.awesome {
+    padding-top: 110px;
+    padding-bottom: 65px;
+    font-size: 0;
+}
+
+.awesome__item {
+    display: inline-block;
+    width: calc(33.333% - 21.333px);
+}   
+
+.awesome__item:not(:last-child) {
+    margin-right: 32px;
+}
+
+.awesome__pic-wrap {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 29px auto;
+    border: 2px solid #ff8b38;
+    border-radius: 50%;
+}
+
+.awesome__pic-wrap--light {
+    background: url('../img/light.png') no-repeat center;
+}
+
+.awesome__pic-wrap--keyboard {
+    background: url('../img/keyboard.png') no-repeat center;
+}
+
+.awesome__pic-wrap--lightning {
+    background: url('../img/lightning.png') no-repeat center;
+}
+
+.awesome__items-title {
+    margin-bottom: 25px;
+    font-size: 20px;
+    line-height: 1;
+    color: #333;
+}
+
+.awesome__items-subtitle {
+    font-size: 14px;
+    color: #86878b;
+}
+
+/* ======== ======== ======== 5 card end ======== ======== ==========*/
+
+/* ======== ======== ======== 6 pricing-options start ======== ======== ==========*/
+
+.pricing-options {
+    padding-top: 109px;
+    padding-bottom: 56px;
+}
+
+/* card */
+
+.cards_wrap {
+    font-size: 0;
+}
+
+.card {
+    display: inline-block;
+    width: calc(33.333% - 26.666px);
+}
+
+.card:not(:last-child) {
+    margin-right: 40px;
+}
+
+.card__title {
+    color: #fff;
+    background-color: #333;
+}
+
+.card__heading {
+    padding-top: 21px;
+    padding-bottom: 17px;
+    font-size: 20px;
+    border-bottom: 1px solid #f5f5f5;
+}
+
+.card__price-value {
+    font-size: 35px;
+    border-bottom: 1px solid #f5f5f5;
+}
+
+.card__price-value span{
+    font-family: 'Raleway', sans-serif;
+    font-size: 94px;
+    font-weight: bold;
+}
+
+.card__payment {
+    padding-top: 17px;
+    padding-bottom: 22px;
+    font-size: 14px;
+    color: #adadad;
+}
+
+.card__popular {
+    min-height: 5px;
+    font-size: 14px;
+    line-height: 47px;
+    text-transform: uppercase;
+    font-weight: bold;
+    background-color: #ff8b38;
+}
+
+.card__list {
+    list-style: none;
+}
+
+.card__item {
+    margin-bottom: 1px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    font-size: 14px;
+    color: #86878b;
+    text-transform: uppercase;
+    background-color: #fff;
+}
+
+/* ======== ======== ======== 6 pricing-options end ======== ======== ==========*/
+
+/* ======== ======== ======== 7 customers start ======== ======== ==========*/
+
+.customers {
+    padding-top: 109px;
+    padding-bottom: 100px;
+}
+
+.customers__subtitle {
+    margin-bottom: 55px;
+}
+
+.customers__cards {
+    font-size: 0;
+}
+
+.customers__item {
+    max-width: 323px;
+    padding: 0 25px;
+    font-size: 16px;
+}
+
+.customers__text {
+    position: relative;
+    padding: 24px 12px;
+    margin-bottom: 23px;
+    font-size: 14px;
+    color: #86878b;
+    background-color: #f5f5f5;
+    border-radius: 5px;
+}
+
+.customers__text:before {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 25px;
+    display: block; 
+    width: 0;
+    height: 0;
+    border-top: 15px solid #f5f5f5;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+}
+
+.customers__person {
+    text-align: left;
+}
+
+.customers__avatar {
+    display: inline-block;
+    text-align: left;
+    margin-right: 15px;
+}
+
+.customers__person-data {
+    display: inline-block;
+    text-align: left;
+    vertical-align: top;
+    padding-top: 11px;
+}
+
+.customers__name {
+    color: #333333;
+    font-size: 20px;
+}
+.customers__profession {
+    font-size: 14px;
+    color: #86878b;
+}
+
+/* ======== ======== ======== 7 customers end ======== ======== ==========*/
+
+/* ======== ======== ======== 8 stylish start ======== ======== ==========*/
+
+.stylish {
+    padding-top: 75px;
+    padding-bottom: 63px;
+    color: #fff;
+    background: url(../img/background-stylish.jpg) no-repeat center,
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    background-size: cover;
+}
+
+.stylish__line {
+    background-color: #fff;
+}
+
+.stylish__title:after{
+    background: #fff;
+}
+
+.stylish__title {
+    color: #fff;
+}
+
+.stylish__subtitle {
+    margin-bottom: 33px;
+    font-size: 16px;
+    font-family: 'Raleway', sans-serif;
+    color: #fff;
+}
+
+/* ======== ======== ======== 8 stylish end ======== ======== ==========*/
+
+/* ======== ======== ======== 9 contact start ======== ======== ==========*/
+
+.contact {
+    padding-top: 109px;
+    padding-bottom: 80px;
+}
+
+.contact__form {
+    font-size: 0;
+}
+
+.contact__form-right,
+.contact__form-left {
+    display: inline-block;
+    width: 47%;
+    margin-bottom: 43px;
+    vertical-align: top;
+}
+
+.contact__form-right {
+    margin-left: 6%;
+}
+
+.contact__input {
+    display: block;
+    width: 100%;
+    padding: 10px 15px;
+    font-size: 14px;
+    color: #bdbdbd;
+    background: transparent;
+    border: 0;
+    border-bottom: 1px solid #d6d6d6;
+}
+
+.contact__input:not(:last-child) {
+    margin-bottom: 30px;
+}
+
+.contact__textarea {
+    display: block;
+    width: 100%;
+    height: 180px;
+    font-size: 14px;
+    color: #bdbdbd;
+    background: transparent;
+    border: 0;
+    border-bottom: 1px solid #bfc0c5;
+}
+
+/* ======== ======== ======== 9 contact end ======== ======== ==========*/
+
+/* ======== ======== ======== 10 footer start ======== ======== ==========*/
+
+.footer {
+    padding-top: 39px;
+    padding-bottom: 15px;
+    background: #000;
+}
+
+.footer__social {
+    margin: 0;
+    margin-bottom: 15px;
+    font-size: 0;
+    list-style-type: none;
+}
+
+.footer__social-item {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+.footer__social-link {
+    display: block;
+}
+
+.footer__social-pic {
+    width: 29px;
+    height: 29px;
+}
+
+.footer__copyright {
+    margin: 0;
+    font-size: 12px;
+    color: #fff;
+}
+
+/* ======== ======== ======== 10 footer end ======== ======== ==========*/
+
+.bg-second{
+    background-color: #f5f5f5;
+}
