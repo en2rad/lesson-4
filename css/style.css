@@ -63,6 +63,7 @@ input:focus{
     font-size: 15px;
     font-weight: 600;
     font-family: inherit;
+    text-decoration: none;
     background: none;
     border: 2px solid;
     color: #fff;
